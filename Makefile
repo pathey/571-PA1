@@ -7,7 +7,10 @@ PA1_Serial:	PA1_Serial.o
 
 PA1_Multithread: 
 
-N = 1 10 100 1000 100000000
+RUNS = 15
+N = 100000000 1000000000 10000000000
+NUM_THREADS = 2 4 8
+NUM_TASKS = 2 4 8
 
 run_serial: PA1_Serial
 		@for n in $(N); do \
