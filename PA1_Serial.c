@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main (int argc, char *argv[]){
-	int N;
-	int sum = 0;
-	int i;
-	sscanf(argv[1], "%d", &N);
-	for (i=0; i <= N; i++){
+int main (int argc, const char *argv[]){
+    unsigned long long int sum = 0, N, i;
+
+    N = strtoull(argv[1], NULL, 10); //string to ull (unsigned long long)
+
+	for (i=0; i < N; i++){ //non-inclusive sum
 		sum += i;
 	}
-	printf("Sum: %d \n", sum);
+	printf("Sum from 1 to %llu (non-inclusive): %llu \n", N, sum);
 }
